@@ -55,11 +55,10 @@ ua = random.choice(['Mozilla/5.0 (Linux; Android 9; RMX1941) AppleWebKit/537.36 
 'Mozilla/5.0 (Linux; Android 8.0.0; ATU-L11 Build/HUAWEIATU-L11; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.3904.108 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/325.0.0.36.170;]'])
 ##### LOGO #####
 logo = """
-  __  __ ____  _____
- |  \/  | __ )|  ___| *au : Alpin
- | |\/| |  _ \| |_    *fb : AlpinXtodd
- | |  | | |_) |  _|   *gh : -
- |_|  |_|____/|_|     *yt : -
+  ''' \033[0;96m╔══╗╔╗─╔═╗╔═╦╗
+ \033[0;96m  ║╔╗║║║─║╬║║║║║®  \033[0m|| Created By AlpinXD
+ \033[0;96m  ║╠╣║║╚╗║╔╝║║║║     \033[0m|| Suport By Kang Reno
+ \033[0;96m  ╚╝╚╝╚═╝╚╝─╚╩═╝
 """
 ips=None
 try:
