@@ -187,6 +187,7 @@ def menu():
   print ('\n *•> Name : '+nm)
   print (' *•> ID : '+id)
   print (' *•> Date of birth : '+tl)
+  print (' *•> Status : '+Premium)
 
   print ('\n *1 Crack ID From Friends')
   print (' *2 Crack ID From Public')
@@ -563,7 +564,7 @@ class crack:
 				except Exception as e:
 					print(' *! File Not Found')
 					continue
-				print(' *•> Password Example : sayang,anjing')
+				print(' *•> Password Example : sayang,anjing,freefire,bismillah,kontol,mobile lgends,name+123')
 				self.pwlist()
 				break
 			elif f=="a":
@@ -586,7 +587,7 @@ class crack:
 					print(' *! File unValid')
 					menu()
 					continue
-				print(' *•> Enable Airplane Mode 5 Seconds If No Result')
+				print(' *•> kalo tidak ada hasil aktifkan mode pesawat 5 detik sajha:v')
 				print('\n *--> Ok Results Saved In Ok.txt')
 				print(' *--> Cp Results Saved In Cp.txt\n')
 				ThreadPool(35).map(self.main,self.fl)
@@ -600,7 +601,7 @@ class crack:
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print('\n *•> Enable Airplane Mode 5 Seconds If No Result')
+			print('\n *•> kalo tidak ada hasil aktifkan mode pesawat 5 detik sajha:v')
                         print('\n *--> Ok Results Saved In Ok.txt')
                         print(' *--> Cp Results Saved In Cp.txt\n')
 			ThreadPool(30).map(self.main,self.fl)
@@ -706,7 +707,7 @@ class crack1:
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print('\n *•> Enable Airplane Mode 5 Seconds If No Result')
+			print('\n *•> kalo tidak ada hasil aktifkan mode pesawat 5 detik sajha:v')
                         print('\n *--> Hasil Ok Tersimpan Di Ok.txt')
                         print(' *--> Hasil Cp Tersimpan Di Cp.txt\n')
 			ThreadPool(30).map(self.main,self.fl)
@@ -797,7 +798,7 @@ class crack2:
 					print(' *! File Tidak Valid')
 					menu()
 					continue
-				print(' *•> Enable Airplane Mode 5 Seconds If No Result')
+				print(' *•> kalo tidak ada hasil aktifkan mode pesawat 5 detik sajha:v')
 				print('\n *--> Ok Results Saved In Ok.txt')
 				print(' *--> Cp Results Saved In Cp.txt\n')
 				ThreadPool(35).map(self.main,self.fl)
