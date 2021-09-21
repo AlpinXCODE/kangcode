@@ -187,7 +187,6 @@ def menu():
   print ('\n *•> Name : '+nm)
   print (' *•> ID : '+id)
   print (' *•> Date of birth : '+tl)
-  print (' *•> Status : '+Premium)
 
   print ('\n *1 Crack ID From Friends')
   print (' *2 Crack ID From Public')
