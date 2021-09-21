@@ -186,7 +186,7 @@ def menu():
   print ('\n *•> Name : '+nm)
   print (' *•> ID : '+id)
   print (' *•> Date of birth : '+tl)
-  print ' (\033[0;96m•\033[0m) IP DEVICE   : %s'%(IP)
+  print (' *•>IP DEVICE   : %s'%(IP)
 
   print ('\n *1 Crack ID From Friends')
   print (' *2 Crack ID From Public')
